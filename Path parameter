@@ -1,0 +1,9 @@
+#http://myntra.com/items/item_id
+
+@app.get("/items/{item_id}")
+def index(item_id):
+    return{"product_id":item_id}
+    
+ On the browser, 
+http://localhost:8000/items/78
+will print ---- {"product_id":"78"}

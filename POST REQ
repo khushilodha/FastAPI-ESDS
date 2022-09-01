@@ -1,0 +1,22 @@
+from fastapi import FastAPI
+from typing import Optional
+
+from pydantic import BaseModel #Basemodel tells which type of data we can send
+
+class User(BaseModel):
+    name:str
+    password:str
+    address:Optional[str]=None #none means default value none
+
+@app.post("/items")
+def index(user:User):
+    return user
+    return "hello world"
+    
+    
+  PASSED http://localhost:8000/items at REQBIN and got the result 
+  {
+    "name": "Rahul",
+    "password": "rahul@123",
+    "address": null
+}

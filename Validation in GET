@@ -1,0 +1,11 @@
+from fastapi import FastAPI,Query
+from typing import Optional
+
+app = FastAPI()
+@app.get("/items")
+def index(q:Optional[str]=Query(None,min_length=3,max_length=5)):
+    return{"q":q}
+    
+    
+    
+Prints the min length 3 and max 5 for any string

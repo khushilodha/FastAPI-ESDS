@@ -1,0 +1,11 @@
+from fastapi import FastAPI
+from typing import Optional
+
+app=FastAPI()
+@app.get("/items/")
+def index(q:int,m:Optional[int]=10):
+    return{"product is":q,"m":m}
+    
+    
+#COMMAND : http://localhost:8000/items/?q=10 will give
+#OUTPUT : {"product is":10,"m":10}

@@ -1,0 +1,7 @@
+@app.get("/items")
+def index(q:int=0):
+    return{"product is":q}
+    
+    
+#COMMAND : http://localhost:8000/items?q=10 will print
+{"product is":10}

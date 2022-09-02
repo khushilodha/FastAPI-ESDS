@@ -10,6 +10,12 @@ async def common_param(q:Optional[str]=None,skip:int=0,limit:int=10):
 async def read_items(commons:dict=Depends(common_param)):
     return commons
     
+@app.get("/users")
+async def read_items(commons:dict=Depends(common_param)):
+    return commons
 
 
 Go to http://localhost:8000/items to print---{"q":null,"skip":0,"limit":10} 
+
+
+**Have Shared Logic**

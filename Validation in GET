@@ -4,7 +4,7 @@ from typing import Optional
 app = FastAPI()
 @app.get("/items")
 def index(q:Optional[str]=Query(None,min_length=3,max_length=5)):
-    return{"q":q
+    return{"q":q}
     
     
     
